@@ -8,43 +8,80 @@
 </head>
 
 <body>
-	
+
     <header>
         <h1>Kalkulator Tambah/Kurang</h1>
     </header>
 
     <main>
-		<input type= "number" id= "bilanganPertama" placeholder = "Bilangan 1">
-		<br>
-		<input type= "number" id= "bilanganKedua" placeholder = "Bilangan 2">
-		<br>
-		<button onclick= "tambah()">Tambah</button>
-		<button onclick= "kurang()">Kurang</button>
-		<br>
-		<input id="Hasil" placeholder = "Hasil" readonly>
 
-		<script>
-			function tambah() {
-				let a = Number(document.getElementById("bilanganPertama").value);
-				let b = Number(document.getElementById("bilanganKedua").value);
-				let c = a + b;
-				document.getElementById("Hasil").value = c;
+        <input type="number" id="bilanganPertama" placeholder="Bilangan 1">
+        <br>
 
-			}
-			
-			function kurang() {
-				let a = Number(document.getElementById("bilanganPertama").value);
-				let b = Number(document.getElementById("bilanganKedua").value);
-				let c = a - b;
-				document.getElementById("Hasil").value = c;
+        <input type="number" id="bilanganKedua" placeholder="Bilangan 2">
+        <br>
 
-			}
-		</script>
+        <button onclick="tambah()">Tambah</button>
+        <button onclick="kurang()">Kurang</button>
+        <br>
+
+        <input id="Hasil" placeholder="Hasil" readonly>
+
+        <script>
+
+            function tambah() {
+
+                let a = document.getElementById("bilanganPertama").value;
+                let b = document.getElementById("bilanganKedua").value;
+
+                if (a === "" || b === "") {
+                    document.getElementById("Hasil").value = "Input tidak boleh kosong";
+                    return;
+                }
+
+                a = Number(a);
+                b = Number(b);
+
+                if (a === 0 || b === 0) {
+                    document.getElementById("Hasil").value = "Bilangan tidak boleh 0";
+                    return;
+                }
+
+                let c = a + b;
+
+                document.getElementById("Hasil").value = c;
+            }
+
+
+            function kurang() {
+
+                let a = document.getElementById("bilanganPertama").value;
+                let b = document.getElementById("bilanganKedua").value;
+
+                if (a === "" || b === "") {
+                    document.getElementById("Hasil").value = "Input tidak boleh kosong";
+                    return;
+                }
+
+                a = Number(a);
+                b = Number(b);
+
+                if (a === 0 || b === 0) {
+                    document.getElementById("Hasil").value = "Bilangan tidak boleh 0";
+                    return;
+                }
+
+                let c = a - b;
+
+                document.getElementById("Hasil").value = c;
+            }
+
+        </script>
+
     </main>
 
-
     <footer>
-        <p>&copy 2026 Christian Alexander Yap;</p>
+        <p>&copy; 2026 Christian Alexander Yap</p>
     </footer>
 
 </body>
