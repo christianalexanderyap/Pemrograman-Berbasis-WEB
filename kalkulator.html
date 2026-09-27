@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HKalkulator Sederhana</title>
+</head>
+
+<body>
+	
+    <header>
+        <h1>Kalkulator Tambah/Kurang</h1>
+    </header>
+
+    <main>
+		<input type= "number" id= "bilanganPertama" placeholder = "Bilangan 1">
+		<br>
+		<input type= "number" id= "bilanganKedua" placeholder = "Bilangan 2">
+		<br>
+		<button onclick= "tambah()">Tambah</button>
+		<button onclick= "kurang()">Kurang</button>
+		<br>
+		<input id="Hasil" placeholder = "Hasil" readonly>
+
+		<script>
+			function tambah() {
+				let a = Number(document.getElementById("bilanganPertama").value);
+				let b = Number(document.getElementById("bilanganKedua").value);
+				let c = a + b;
+				document.getElementById("Hasil").value = c;
+
+			}
+			
+			function kurang() {
+				let a = Number(document.getElementById("bilanganPertama").value);
+				let b = Number(document.getElementById("bilanganKedua").value);
+				let c = a - b;
+				document.getElementById("Hasil").value = c;
+
+			}
+		</script>
+    </main>
+
+
+    <footer>
+        <p>&copy 2026 Christian Alexander Yap;</p>
+    </footer>
+
+</body>
+
+</html>
