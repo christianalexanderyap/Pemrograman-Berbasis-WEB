@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Profil Christian Alexander Yap</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header Website dengan Navigasi dan Tombol Kontrol -->
+    <header>
+        <div class="identitas">
+            <h1>Christian Alexander Yap</h1>
+            <p>Inisial: CA</p>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#profil">Profil</a></li>
+                <li><a href="#portofolio">Portofolio</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </nav>
+
+        <div>
+            <button id="btn-toggle-aside" style="margin-right: 8px; padding: 6px 12px; 
+			cursor: pointer;">Sembunyikan Kontak</button>
+            <button id="btn-tema" style="padding: 6px 12px; cursor: pointer;">Mode Gelap</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Bagian Profil / Tentang Saya -->
+        <section id="profil" class="profil">
+            <h2>Tentang Saya</h2>
+
+            <table>
+                <tr>
+                    <th>Nama</th>
+                    <td>Christian Alexander Yap</td>
+                </tr>
+                <tr>
+                    <th>Jenis Kelamin</th>
+                    <td>Laki-laki</td>
+                </tr>
+                <tr>
+                    <th>Umur</th>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <th>Agama</th>
+                    <td>Buddha</td>
+                </tr>
+                <tr>
+                    <th>Alamat</th>
+                    <td>Gebang Baru No. 30, Jetis, Wedomartani, Ngemplak, Sleman Regency, Yogyakarta 55584</td>
+                </tr>
+                <tr>
+                    <th>Daerah Asal</th>
+                    <td>Tarakan, Kalimantan Utara</td>
+                </tr>
+                <tr>
+                    <th>Hobi</th>
+                    <td>Bermain Game</td>
+                </tr>
+            </table>
+
+            <h3>Latar Pendidikan</h3>
+            <ol>
+                <li>SDN 024 Tarakan</li>
+                <li>SMPN 07 Tarakan</li>
+                <li>SMKN 1 Tarakan</li>
+            </ol>
+        </section>
+
+        <!-- Bagian Portofolio Dinamis -->
+        <section id="portofolio" class="portofolio">
+            <h2>Portofolio</h2>
+            <button id="btn-tambah" style="margin-bottom: 16px; padding: 8px 12px; cursor: pointer;">Tambah Portofolio</button>
+            <div class="daftar-artikel"></div>
+        </section>
+
+        <!-- Bagian Komentar Pengunjung -->
+        <section id="komentar" class="komentar-section">
+            <h2>Tinggalkan Komentar</h2>
+            
+            <!-- Tempat menampilkan pesan error validasi langsung di halaman -->
+            <div id="error-pesan" style="color: #d9534f; margin-bottom: 10px; font-weight: bold; display: none;"></div>
+            
+            <form id="form-komentar">
+                <input type="text" id="input-nama" placeholder="Nama Anda" required>
+                <textarea id="input-pesan" placeholder="Tulis komentar (minimal 5 karakter)..." required></textarea>
+                <button type="submit">Kirim</button>
+            </form>
+
+            <div style="margin-top: 16px;">
+                <button id="btn-hapus-semua" class="btn-hapus-semua">Hapus Semua Komentar</button>
+            </div>
+
+            <ul id="daftar-komentar" style="margin-top: 20px; list-style: none; padding: 0;"></ul>
+        </section>
+
+        <!-- Informasi Kontak (Sidebar) -->
+        <aside id="kontak">
+            <h2>Informasi Kontak</h2>
+            <p>Email: christianalexanderyap@gmail.com</p>
+            <p>Telepon: <a href="https://wa.me/6281253797858">081253797858</a></p>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Christian Alexander Yap</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
